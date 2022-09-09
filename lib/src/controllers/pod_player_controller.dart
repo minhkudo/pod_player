@@ -45,7 +45,7 @@ class PodPlayerController {
     if (!_isCtrInitialised) {
       _init();
     }
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) async {
       try {
         if (!_isCtrInitialised) {
           await _ctr.videoInit();

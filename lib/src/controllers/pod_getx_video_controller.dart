@@ -253,7 +253,7 @@ class PodGetXVideoController extends _PodGesturesController {
 
   ///checkes wether video should be `autoplayed` initially
   void checkAutoPlayVideo() {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) async {
       if (autoPlay && (isVideoUiBinded ?? false)) {
         if (kIsWeb) await _videoCtr?.setVolume(0);
         podVideoStateChanger(PodVideoState.playing);

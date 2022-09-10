@@ -65,7 +65,7 @@ class VideoApis {
         urls.addAll(
           manifest.muxed.map(
             (element) => VideoQalityUrls(
-              quality: int.parse(element.qualityLabel.split('p')[0]),
+              quality: int.parse(element.videoQualityLabel.split('p')[0]),
               url: element.url.toString(),
             ),
           ),

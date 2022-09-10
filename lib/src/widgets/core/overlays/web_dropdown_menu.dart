@@ -100,12 +100,12 @@ class _WebSettingsDropdownState extends State<_WebSettingsDropdown> {
       items: _podCtr.videoPlaybackSpeeds
           .map(
             (e) => PopupMenuItem(
-              child: ListTile(
-                title: Text(e),
-              ),
               onTap: () {
                 _podCtr.setVideoPlayBack(e);
               },
+              child: ListTile(
+                title: Text(e),
+              ),
             ),
           )
           .toList(),
